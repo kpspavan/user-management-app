@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# User Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple React application for managing user data, with features for adding, editing, and deleting users. The project uses JSON Server as a mock backend for user data.
 
-## Available Scripts
+## Description
+How to run the JSON server?
+A.make sure u install the all the packages using npm install and install the packages open new terminal and use this command  
+## json-server --watch json-server/db.json --port 3001
+make sure its should in 3001 port beacuse the api i used 3001 localhost port 
 
-In the project directory, you can run:
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The User Management System is a React application that allows users to perform CRUD operations on a list of users. It uses JSON Server to simulate a backend API for managing user data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Components
 
-### `npm test`
+### Layout
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The `Layout` component provides a common layout structure for different pages.
 
-### `npm run build`
+### Input
+The `Input` component handles data in input  its a reasubel component.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Dropdown
+The `Dropdown` component handles data in drop  its a reasubel component.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### UserList
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The `UserList` component displays a paginated list of users, allowing users to navigate to user details and perform various actions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### UserDetails
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The `UserDetails` component shows detailed information about a specific user, allowing users to edit or delete the user.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### UserForm
 
-## Learn More
+The `UserForm` component is a reusable form for adding or editing users.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### UserPagination
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The `UserPagination` component handles pagination for the list of users.
 
-### Code Splitting
+### CustomSnackbar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The `CustomSnackbar` component is a customizable snackbar for displaying messages to the user.
 
-### Analyzing the Bundle Size
+## Folder Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The project follows a standard React project structure. Key folders include:
 
-### Making a Progressive Web App
+- `src`: Contains the source code for the React application.
+- `public`: Holds static assets and the HTML file.
+- `server`: Includes the JSON Server configuration and database file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
 
-### Advanced Configuration
+- React
+- JSON Server
+- Material-UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Setup
 
-### Deployment
+1. Clone the repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+git clone https://github.com/your-username/user-management-system.git
+cd user-management-system

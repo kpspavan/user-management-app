@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "id": "15",
+      "username": "as",
+      "email": "as@gmail.com",
+      "role": "user"
+    },
+    {
+      "username": "``1",
+      "email": "as@gmail.com",
+      "role": "admin",
+      "id": "1449"
+    },
+    {
+      "username": "pavan12344555",
+      "email": "1p@gmail.com",
+      "role": "admin",
+      "id": "1451"
+    },
+    {
+      "username": "sad123as2",
+      "email": "kwps@gmail.com",
+      "role": "admin",
+      "id": "1452"
+    },
+    {
+      "id": "1453",
+      "username": "ll",
+      "email": "ll@gmail.com",
+      "role": "admin"
+    },
+    {
+      "id": "1454",
+      "username": "a",
+      "email": "a@gmail.com",
+      "role": "admin"
+    }
+  ]
+}
