@@ -6,7 +6,7 @@ A simple React application for managing user data, with features for adding, edi
 How to run the JSON server?
 A.make sure u install the all the packages using npm install and install the packages open new terminal and use this command  
 ## json-server --watch json-server/db.json --port 3001
-make sure its should in 3001 port beacuse the api i used 3001 localhost port 
+make sure its should in 3001 port beacuse the api i used 3001 localhost port
 
 
 ## Description
@@ -66,5 +66,5 @@ The project follows a standard React project structure. Key folders include:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/user-management-system.git
-cd user-management-system
+git clone https://github.com/kpspavan/user-management-app.git
+cd user-management-app

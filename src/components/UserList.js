@@ -75,6 +75,7 @@ const UserList = () => {
     state.isUserDeleted,
     state.isEditSuccess,
   ]);
+
   const totalUsers = state.users.length;
   const totalPages = Math.ceil(totalUsers / itemsPerPage);
 
@@ -99,55 +100,71 @@ const UserList = () => {
   return (
     <>
       <Layout />
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Username</TableCell>
-              <TableCell>Email</TableCell>
-              <TableCell>Role</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {displayedUsers.map((user) => (
-              <TableRow
-                key={user.id}
-                onClick={() => handleUserClick(user.id)}
-                style={{ cursor: "pointer" }}
-              >
-                <TableCell>{user.id}</TableCell>
-                <TableCell>{user.username}</TableCell>
-                <TableCell>{user.email}</TableCell>
-                <TableCell>{user.role}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <UserPagination
-        page={currentPage}
-        totalPages={totalPages}
-        onPageChange={handlePageChange}
-      />
-      <CustomSnackbar
-        open={isSnackbarOpen}
-        onClose={handleSnackbarClose}
-        message={snackbarMessage}
-        severity="success"
-      />
-      <CustomSnackbar
-        open={isSnackbarOpendeleted}
-        onClose={handleSnackbarClose}
-        message={snackbarMessagedeleted}
-        severity="warning"
-      />
-      <CustomSnackbar
-        open={isSnackbarOpenEdit}
-        onClose={handleSnackbarClose}
-        message={snackbarMessageEdit}
-        severity="info"
-      />
+      {totalUsers === 0 ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            fontSize: "20px",
+          }}
+        >
+          No user found Please Create a user{" "}
+        </div>
+      ) : (
+        <>
+          <TableContainer component={Paper}>
+            <Table>
+              <TableHead>
+                <TableRow>
+                  <TableCell>ID</TableCell>
+                  <TableCell>Username</TableCell>
+                  <TableCell>Email</TableCell>
+                  <TableCell>Role</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {displayedUsers.map((user) => (
+                  <TableRow
+                    key={user.id}
+                    onClick={() => handleUserClick(user.id)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <TableCell>{user.id}</TableCell>
+                    <TableCell>{user.username}</TableCell>
+                    <TableCell>{user.email}</TableCell>
+                    <TableCell>{user.role}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <UserPagination
+            page={currentPage}
+            totalPages={totalPages}
+            onPageChange={handlePageChange}
+          />
+          <CustomSnackbar
+            open={isSnackbarOpen}
+            onClose={handleSnackbarClose}
+            message={snackbarMessage}
+            severity="success"
+          />
+          <CustomSnackbar
+            open={isSnackbarOpendeleted}
+            onClose={handleSnackbarClose}
+            message={snackbarMessagedeleted}
+            severity="warning"
+          />
+          <CustomSnackbar
+            open={isSnackbarOpenEdit}
+            onClose={handleSnackbarClose}
+            message={snackbarMessageEdit}
+            severity="info"
+          />
+        </>
+      )}
     </>
   );
 };
